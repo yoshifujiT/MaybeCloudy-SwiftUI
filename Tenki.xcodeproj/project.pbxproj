@@ -24,6 +24,8 @@
 		9CBCFFCA24B1D6F90045FAAF /* TenkiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBCFFC924B1D6F90045FAAF /* TenkiDetailView.swift */; };
 		9CBCFFCC24B1DC7B0045FAAF /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBCFFCB24B1DC7B0045FAAF /* CityData.swift */; };
 		9CBCFFCE24B1EC240045FAAF /* TenkiListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBCFFCD24B1EC240045FAAF /* TenkiListRow.swift */; };
+		9CBCFFD024B1F08A0045FAAF /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 9CBCFFCF24B1F08A0045FAAF /* .env */; };
+		9CBCFFD224B1F0C10045FAAF /* .env.sample in Resources */ = {isa = PBXBuildFile; fileRef = 9CBCFFD124B1F0C10045FAAF /* .env.sample */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		9CBCFFC924B1D6F90045FAAF /* TenkiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiDetailView.swift; sourceTree = "<group>"; };
 		9CBCFFCB24B1DC7B0045FAAF /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
 		9CBCFFCD24B1EC240045FAAF /* TenkiListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiListRow.swift; sourceTree = "<group>"; };
+		9CBCFFCF24B1F08A0045FAAF /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		9CBCFFD124B1F0C10045FAAF /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				9C96F07D24B0B34E00B86D69 /* TenkiTests */,
 				9C96F08824B0B34E00B86D69 /* TenkiUITests */,
 				9C96F06524B0B34C00B86D69 /* Products */,
+				9CBCFFCF24B1F08A0045FAAF /* .env */,
+				9CBCFFD124B1F0C10045FAAF /* .env.sample */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,9 +313,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CBCFFD024B1F08A0045FAAF /* .env in Resources */,
 				9CBCFFC524B0F74C0045FAAF /* cityData.json in Resources */,
 				9C96F07424B0B34E00B86D69 /* LaunchScreen.storyboard in Resources */,
 				9C96F07124B0B34E00B86D69 /* Preview Assets.xcassets in Resources */,
+				9CBCFFD224B1F0C10045FAAF /* .env.sample in Resources */,
 				9C96F06E24B0B34E00B86D69 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

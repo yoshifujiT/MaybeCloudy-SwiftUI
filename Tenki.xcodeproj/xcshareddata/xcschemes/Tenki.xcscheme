@@ -70,13 +70,6 @@
             ReferencedContainer = "container:Tenki.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OPEN_WEATHER_MAP_API_KEY"
-            value = "52073bbff3d2ffc60ba0f91b1dc3be42"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
