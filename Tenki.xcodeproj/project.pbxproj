@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		9C96F06824B0B34C00B86D69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F06724B0B34C00B86D69 /* AppDelegate.swift */; };
 		9C96F06A24B0B34C00B86D69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F06924B0B34C00B86D69 /* SceneDelegate.swift */; };
-		9C96F06C24B0B34C00B86D69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F06B24B0B34C00B86D69 /* ContentView.swift */; };
+		9C96F06C24B0B34C00B86D69 /* TenkiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F06B24B0B34C00B86D69 /* TenkiList.swift */; };
 		9C96F06E24B0B34E00B86D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C96F06D24B0B34E00B86D69 /* Assets.xcassets */; };
 		9C96F07124B0B34E00B86D69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C96F07024B0B34E00B86D69 /* Preview Assets.xcassets */; };
 		9C96F07424B0B34E00B86D69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C96F07224B0B34E00B86D69 /* LaunchScreen.storyboard */; };
 		9C96F07F24B0B34E00B86D69 /* TenkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F07E24B0B34E00B86D69 /* TenkiTests.swift */; };
 		9C96F08A24B0B34E00B86D69 /* TenkiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F08924B0B34E00B86D69 /* TenkiUITests.swift */; };
+		9C96F09824B0B7E400B86D69 /* WeatherTodayFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F09724B0B7E400B86D69 /* WeatherTodayFetcher.swift */; };
+		9C96F09B24B0BA1700B86D69 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F09A24B0BA1700B86D69 /* City.swift */; };
+		9C96F09D24B0BE2C00B86D69 /* TopCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F09C24B0BE2C00B86D69 /* TopCities.swift */; };
+		9C96F0A024B0EA2100B86D69 /* TenkiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F09F24B0EA2100B86D69 /* TenkiListViewModel.swift */; };
+		9CBCFFC524B0F74C0045FAAF /* cityData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CBCFFC424B0F74C0045FAAF /* cityData.json */; };
+		9CBCFFC824B1A5DB0045FAAF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBCFFC724B1A5DB0045FAAF /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,7 @@
 		9C96F06424B0B34C00B86D69 /* Tenki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tenki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C96F06724B0B34C00B86D69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C96F06924B0B34C00B86D69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C96F06B24B0B34C00B86D69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9C96F06B24B0B34C00B86D69 /* TenkiList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiList.swift; sourceTree = "<group>"; };
 		9C96F06D24B0B34E00B86D69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C96F07024B0B34E00B86D69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C96F07324B0B34E00B86D69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		9C96F08524B0B34E00B86D69 /* TenkiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TenkiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C96F08924B0B34E00B86D69 /* TenkiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiUITests.swift; sourceTree = "<group>"; };
 		9C96F08B24B0B34E00B86D69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C96F09724B0B7E400B86D69 /* WeatherTodayFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTodayFetcher.swift; sourceTree = "<group>"; };
+		9C96F09A24B0BA1700B86D69 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		9C96F09C24B0BE2C00B86D69 /* TopCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCities.swift; sourceTree = "<group>"; };
+		9C96F09F24B0EA2100B86D69 /* TenkiListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiListViewModel.swift; sourceTree = "<group>"; };
+		9CBCFFC424B0F74C0045FAAF /* cityData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cityData.json; sourceTree = "<group>"; };
+		9CBCFFC724B1A5DB0045FAAF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Tenki/Model/Data.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,13 @@
 		9C96F06624B0B34C00B86D69 /* Tenki */ = {
 			isa = PBXGroup;
 			children = (
+				9CBCFFC624B1A2C00045FAAF /* API */,
+				9CBCFFC324B0F7100045FAAF /* Resources */,
+				9CBCFFC224B0F60C0045FAAF /* View */,
+				9C96F09E24B0EA1400B86D69 /* ViewModel */,
+				9C96F09924B0BA0D00B86D69 /* Model */,
 				9C96F06724B0B34C00B86D69 /* AppDelegate.swift */,
 				9C96F06924B0B34C00B86D69 /* SceneDelegate.swift */,
-				9C96F06B24B0B34C00B86D69 /* ContentView.swift */,
 				9C96F06D24B0B34E00B86D69 /* Assets.xcassets */,
 				9C96F07224B0B34E00B86D69 /* LaunchScreen.storyboard */,
 				9C96F07524B0B34E00B86D69 /* Info.plist */,
@@ -134,6 +150,48 @@
 				9C96F08B24B0B34E00B86D69 /* Info.plist */,
 			);
 			path = TenkiUITests;
+			sourceTree = "<group>";
+		};
+		9C96F09924B0BA0D00B86D69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CBCFFC724B1A5DB0045FAAF /* Data.swift */,
+				9C96F09A24B0BA1700B86D69 /* City.swift */,
+				9C96F09C24B0BE2C00B86D69 /* TopCities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C96F09E24B0EA1400B86D69 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C96F09F24B0EA2100B86D69 /* TenkiListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9CBCFFC224B0F60C0045FAAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C96F06B24B0B34C00B86D69 /* TenkiList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CBCFFC324B0F7100045FAAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CBCFFC424B0F74C0045FAAF /* cityData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9CBCFFC624B1A2C00045FAAF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9C96F09724B0B7E400B86D69 /* WeatherTodayFetcher.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CBCFFC524B0F74C0045FAAF /* cityData.json in Resources */,
 				9C96F07424B0B34E00B86D69 /* LaunchScreen.storyboard in Resources */,
 				9C96F07124B0B34E00B86D69 /* Preview Assets.xcassets in Resources */,
 				9C96F06E24B0B34E00B86D69 /* Assets.xcassets in Resources */,
@@ -268,8 +327,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C96F06824B0B34C00B86D69 /* AppDelegate.swift in Sources */,
+				9C96F09D24B0BE2C00B86D69 /* TopCities.swift in Sources */,
+				9C96F09824B0B7E400B86D69 /* WeatherTodayFetcher.swift in Sources */,
 				9C96F06A24B0B34C00B86D69 /* SceneDelegate.swift in Sources */,
-				9C96F06C24B0B34C00B86D69 /* ContentView.swift in Sources */,
+				9C96F06C24B0B34C00B86D69 /* TenkiList.swift in Sources */,
+				9C96F0A024B0EA2100B86D69 /* TenkiListViewModel.swift in Sources */,
+				9C96F09B24B0BA1700B86D69 /* City.swift in Sources */,
+				9CBCFFC824B1A5DB0045FAAF /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
