@@ -9,5 +9,5 @@
 import Foundation
 
 struct TopCities: Decodable {
-    var list: [City]
+    var list: [Weather]
 }

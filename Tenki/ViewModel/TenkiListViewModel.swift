@@ -9,12 +9,12 @@
 import Foundation
 
 class TenkiListViewModel: ObservableObject {
-    let cityIds = cityData.map({$0.id})
+    let cityIds = cityData.map({ $0.id })
     
-    @Published var weatherData: [City] = []
+    @Published var weatherData: [Weather] = []
 
     init() {
-        let fetcher = WeatherTodayFetcher(cityIds: self.cityIds)
+        let fetcher = WeatherTodayFetcher(cityIds: cityIds)
         
         fetcher.fetchWeatherData { (weather) in
             print(weather)

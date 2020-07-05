@@ -19,13 +19,14 @@ class WeatherTodayFetcher {
     
     var url: URL {
         let id = cityIds.map({ String(describing: $0) }).joined(separator: ",")
+        print(id)
         // TODO: apikeyが見つからない場合のエラー処理
         let str = "\(baseUrl)?id=\(id)&APPID=\(apikey!)&lang=ja"
 
         return URL(string: str)!
     }
 
-    func fetchWeatherData(completion: @escaping ([City]) -> Void) {
+    func fetchWeatherData(completion: @escaping ([Weather]) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             let decoder: JSONDecoder = JSONDecoder()

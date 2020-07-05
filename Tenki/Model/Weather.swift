@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct City: Decodable, Identifiable {
+struct Weather: Decodable, Identifiable {
     var id: Int
     var name: String
 

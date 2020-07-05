@@ -11,7 +11,7 @@ import CoreLocation
 import UIKit
 import SwiftUI
 
-let cityData: [City] = load("cityData.json")
+let cityData: [CityData] = load("cityData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
