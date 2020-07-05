@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct TenkiListView: View {
-   
     @ObservedObject private var tenkiListVM = TenkiListViewModel()
     
     func getCityItem(cityId: Int) -> CityData {
@@ -20,14 +19,17 @@ struct TenkiListView: View {
     var body: some View {
         NavigationView {
             List(tenkiListVM.weatherData) { weather in
+                // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
                 NavigationLink(
                     destination: TenkiDetailView(
                         weather: weather,
                         city: self.getCityItem(cityId: weather.id)
                     )
                 ) {
-                    // TODO: Rowを別のViewに移す
-                    Text(self.getCityItem(cityId: weather.id).label)
+                    TenkiListRow(
+                        weather: weather,
+                        city: self.getCityItem(cityId: weather.id)
+                    )
                 }
             }
             .navigationBarTitle(Text("お天気リスト"))
