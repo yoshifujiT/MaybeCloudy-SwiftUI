@@ -12,12 +12,12 @@ struct CityData: Decodable, Identifiable {
     var id: Int
     var name: String
     var label: String
-    var rank: Int
+    var rankWorst: Int
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case label
-        case rank
+        case rankWorst
     }
 }
