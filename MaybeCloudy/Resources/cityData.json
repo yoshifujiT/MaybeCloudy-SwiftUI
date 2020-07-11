@@ -1,15 +1,62 @@
 [
     {
-        "id": 1849890,
-        "name": "tottori",
-        "label": "鳥取市",
-        "rank": 1
+        "id": 1863983,
+        "name": "fukui",
+        "label": "福井県",
+        "rankWorst": 10
     },
     {
         "id": 1854381,
         "name": "okayama",
-        "label": "岡山市",
-        "rank": 2
+        "label": "岡山県",
+        "rankWorst": 9
+    },
+    {
+        "id": 1852553,
+        "name": "shiga",
+        "label": "滋賀県",
+        "rankWorst": 8
+    },
+    {
+        "id": 1849890,
+        "name": "tottori",
+        "label": "鳥取県",
+        "rankWorst": 7
+    },
+    {
+        "id": 1853226,
+        "name": "saitama",
+        "label": "埼玉県",
+        "rankWorst": 6
+    },
+    {
+        "id": 1850310,
+        "name": "tochigi",
+        "label": "栃木県",
+        "rankWorst": 5
+    },
+    {
+        "id": 1850157,
+        "name": "tokushima",
+        "label": "徳島県",
+        "rankWorst": 4
+    },
+    {
+        "id": 1863501,
+        "name": "gunma",
+        "label": "群馬県",
+        "rankWorst": 3
+    },
+    {
+        "id": 1853299,
+        "name": "saga",
+        "label": "佐賀県",
+        "rankWorst": 2
+    },
+    {
+        "id": 2112669,
+        "name": "ibaraki",
+        "label": "茨城県",
+        "rankWorst": 1
     }
-
 ]
