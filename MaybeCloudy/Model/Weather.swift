@@ -9,14 +9,14 @@
 import Foundation
 
 struct Weather: Decodable, Identifiable {
-    var weatherDetail: WeatherDetail
     var id: Int
     var name: String
+    var weatherDetail: [WeatherDetail]
 
     enum CodingKeys: String, CodingKey {
-        case weatherDetail = "weather"
         case id = "id"
         case name = "name"
+        case weatherDetail = "weather"
     }
 }
 

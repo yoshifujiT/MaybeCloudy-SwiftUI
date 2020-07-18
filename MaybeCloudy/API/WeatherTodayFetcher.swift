@@ -22,7 +22,6 @@ class WeatherTodayFetcher {
         print(id)
         // TODO: apikeyが見つからない場合のエラー処理
         let str = "\(baseUrl)?id=\(id)&APPID=\(apikey!)&lang=ja"
-        print(str);
 
         return URL(string: str)!
     }

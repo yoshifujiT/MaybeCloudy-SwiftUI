@@ -21,14 +21,16 @@ struct WeatherListRow_Previews: PreviewProvider {
     static var previews: some View {
         WeatherListRow(
             weather: Weather(
-                weatherDetail: WeatherDetail(
-                    id: 111,
-                    main: "Cloudy",
-                    description: "description",
-                    icon: "icon"
-                ),
                 id: 111,
-                name: "city name"
+                name: "city name",
+                weatherDetail: [
+                    WeatherDetail(
+                        id: 111,
+                        main: "Cloudy",
+                        description: "description",
+                        icon: "icon"
+                    )
+                ]
             ),
             city: cityData[0]
         )
