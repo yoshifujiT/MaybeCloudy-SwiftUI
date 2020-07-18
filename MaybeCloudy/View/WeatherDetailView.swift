@@ -21,6 +21,12 @@ struct WeatherDetail_Previews: PreviewProvider {
     static var previews: some View {
         WeatherDetailView(
             weather: Weather(
+                weatherDetail: WeatherDetail(
+                    id: 111,
+                    main: "Cloudy",
+                    description: "description",
+                    icon: "icon"
+                ),
                 id: 111,
                 name: "city name"
             ),
