@@ -11,9 +11,17 @@ import SwiftUI
 struct WeatherListRow: View {
     let weather: Weather
     let city: CityData
+
+    func getWeatherDetail() -> WeatherDetail {
+        return weather.weatherDetail[0]
+    }
     
     var body: some View {
-        Text(city.label)
+        VStack {
+            Text(city.label)
+            Text(getWeatherDetail().main)
+            Text(getWeatherDetail().description)
+        }
     }
 }
 
