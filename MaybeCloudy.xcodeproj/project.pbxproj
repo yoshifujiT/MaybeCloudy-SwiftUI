@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C17FDF024C4802500E37C34 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17FDEF24C4802500E37C34 /* Util.swift */; };
+		9C17FDF224C481CC00E37C34 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17FDF124C481CC00E37C34 /* URLImage.swift */; };
+		9C17FDF424C4824300E37C34 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17FDF324C4824300E37C34 /* ImageLoader.swift */; };
 		9C4B932924BA02CC005A1CAB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B932824BA02CB005A1CAB /* Data.swift */; };
 		9C96F06824B0B34C00B86D69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F06724B0B34C00B86D69 /* AppDelegate.swift */; };
 		9C96F06A24B0B34C00B86D69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96F06924B0B34C00B86D69 /* SceneDelegate.swift */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C17FDEF24C4802500E37C34 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		9C17FDF124C481CC00E37C34 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		9C17FDF324C4824300E37C34 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		9C4B932824BA02CB005A1CAB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9C96F06424B0B34C00B86D69 /* MaybeCloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaybeCloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C96F06724B0B34C00B86D69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C17FDEE24C4800900E37C34 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9C17FDEF24C4802500E37C34 /* Util.swift */,
+				9C17FDF324C4824300E37C34 /* ImageLoader.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		9C96F05B24B0B34C00B86D69 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +138,7 @@
 		9C96F06624B0B34C00B86D69 /* MaybeCloudy */ = {
 			isa = PBXGroup;
 			children = (
+				9C17FDEE24C4800900E37C34 /* Modules */,
 				9CBCFFC624B1A2C00045FAAF /* API */,
 				9CBCFFC324B0F7100045FAAF /* Resources */,
 				9CBCFFC224B0F60C0045FAAF /* View */,
@@ -189,6 +205,7 @@
 				9C96F06B24B0B34C00B86D69 /* WeatherListView.swift */,
 				9CBCFFCD24B1EC240045FAAF /* WeatherListRow.swift */,
 				9CBCFFC924B1D6F90045FAAF /* WeatherDetailView.swift */,
+				9C17FDF124C481CC00E37C34 /* URLImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,10 +360,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C17FDF424C4824300E37C34 /* ImageLoader.swift in Sources */,
 				9CBCFFCA24B1D6F90045FAAF /* WeatherDetailView.swift in Sources */,
+				9C17FDF024C4802500E37C34 /* Util.swift in Sources */,
 				9C96F06824B0B34C00B86D69 /* AppDelegate.swift in Sources */,
 				9C96F09D24B0BE2C00B86D69 /* TopCities.swift in Sources */,
 				9C96F09824B0B7E400B86D69 /* WeatherTodayFetcher.swift in Sources */,
+				9C17FDF224C481CC00E37C34 /* URLImage.swift in Sources */,
 				9C96F06A24B0B34C00B86D69 /* SceneDelegate.swift in Sources */,
 				9C4B932924BA02CC005A1CAB /* Data.swift in Sources */,
 				9C96F06C24B0B34C00B86D69 /* WeatherListView.swift in Sources */,

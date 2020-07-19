@@ -28,9 +28,19 @@ struct WeatherDetail_Previews: PreviewProvider {
                         id: 111,
                         main: "Cloudy",
                         description: "description",
-                        icon: "icon"
+                        icon: "02n"
                     )
-                ]
+                ],
+                weatherMain: WeatherMain(
+                    temp: 25,
+                    tempMin: 25,
+                    tempMax: 25,
+                    humidity: 83
+                ),
+                wind: Wind(
+                    speed: 2.1,
+                    deg: 30
+                )
             ),
             city: cityData[0]
         )

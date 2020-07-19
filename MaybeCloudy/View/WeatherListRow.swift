@@ -16,11 +16,26 @@ struct WeatherListRow: View {
         return weather.weatherDetail[0]
     }
     
+    func getIconURL() -> String {
+        let iconCode = getWeatherDetail().icon
+        return Util.getIconNameByCode(iconCode: iconCode)
+    }
+    
     var body: some View {
-        VStack {
+        HStack {
             Text(city.label)
             Text(getWeatherDetail().main)
             Text(getWeatherDetail().description)
+            URLImage(url: getIconURL()) {
+                $0.renderingMode(.original)
+                    .resizable()
+                    .frame(width: 50.0, height: 50.0)
+            }
+            HStack {
+                Text(String(weather.weatherMain.tempMax))
+                Text("/")
+                Text(String(weather.weatherMain.tempMin))
+            }
         }
     }
 }
@@ -36,9 +51,19 @@ struct WeatherListRow_Previews: PreviewProvider {
                         id: 111,
                         main: "Cloudy",
                         description: "description",
-                        icon: "icon"
+                        icon: "02d"
                     )
-                ]
+                ],
+                weatherMain: WeatherMain(
+                    temp: 25,
+                    tempMin: 25,
+                    tempMax: 25,
+                    humidity: 83
+                ),
+                wind: Wind(
+                    speed: 2.1,
+                    deg: 30
+                )
             ),
             city: cityData[0]
         )

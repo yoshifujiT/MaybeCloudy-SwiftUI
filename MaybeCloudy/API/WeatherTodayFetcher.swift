@@ -21,7 +21,7 @@ class WeatherTodayFetcher {
         let id = cityIds.map({ String(describing: $0) }).joined(separator: ",")
         print(id)
         // TODO: apikeyが見つからない場合のエラー処理
-        let str = "\(baseUrl)?id=\(id)&APPID=\(apikey!)&lang=ja"
+        let str = "\(baseUrl)?id=\(id)&APPID=\(apikey!)&lang=ja&units=metric"
 
         return URL(string: str)!
     }
