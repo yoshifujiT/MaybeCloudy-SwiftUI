@@ -17,22 +17,33 @@ struct WeatherListView: View {
     }
 
     var body: some View {
-        NavigationView {
-            List(weatherListVM.weatherData) { weather in
-                // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
-                NavigationLink(
-                    destination: WeatherDetailView(
-                        weather: weather,
-                        city: self.getCityItem(cityId: weather.id)
-                    )
-                ) {
-                    WeatherListRow(
-                        weather: weather,
-                        city: self.getCityItem(cityId: weather.id)
-                    )
+        ZStack {
+            Color("Gray01")
+                .edgesIgnoringSafeArea(.all)
+    
+            VStack {
+                AppBar()
+                Spacer()
+                NavigationView {
+                    List(weatherListVM.weatherData) { weather in
+                        // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
+                        NavigationLink(
+                            destination: WeatherDetailView(
+                                weather: weather,
+                                city: self.getCityItem(cityId: weather.id)
+                            )
+                        ) {
+                            WeatherListRow(
+                                weather: weather,
+                                city: self.getCityItem(cityId: weather.id)
+                            )
+                        }.background(Color.clear)
+                    }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
                 }
-            }
-            .navigationBarTitle(Text("お天気リスト"))
+                .background(Color.green)
+            }.edgesIgnoringSafeArea(.top)
         }
     }
 }

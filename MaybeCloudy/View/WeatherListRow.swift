@@ -22,21 +22,25 @@ struct WeatherListRow: View {
     }
     
     var body: some View {
-        HStack {
-            Text(city.label)
-            Text(getWeatherDetail().main)
-            Text(getWeatherDetail().description)
-            URLImage(url: getIconURL()) {
-                $0.renderingMode(.original)
-                    .resizable()
-                    .frame(width: 50.0, height: 50.0)
-            }
+        HStack(spacing: 0) {
+            Text(city.label).font(.headline)
+            Spacer()
+            VStack {
+                URLImage(url: getIconURL()) {
+                    $0.renderingMode(.original)
+                        .resizable()
+                        .frame(width: 60.0, height: 60.0, alignment: .center)
+                }
+                Text(getWeatherDetail().description).font(.caption)
+            }.padding(.trailing, 10).frame(width: 90, alignment: .center)
             HStack {
-                Text(String(weather.weatherMain.tempMax))
-                Text("/")
-                Text(String(weather.weatherMain.tempMin))
+                Text(String(round(weather.weatherMain.tempMax * 10) / 10)).foregroundColor(Color("Alert"))
+                Text("/").foregroundColor(Color.gray)
+                Text(String(round(weather.weatherMain.tempMin * 10) / 10)).foregroundColor(Color("Primary"))
             }
-        }
+            .font(.subheadline)
+            .frame(width: 90, alignment: .leading)
+        }.padding(.vertical, 5)
     }
 }
 
@@ -50,7 +54,7 @@ struct WeatherListRow_Previews: PreviewProvider {
                     WeatherDetail(
                         id: 111,
                         main: "Cloudy",
-                        description: "description",
+                        description: "曇りがち",
                         icon: "02d"
                     )
                 ],
