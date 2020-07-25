@@ -26,7 +26,7 @@ struct WeatherListView: View {
                 NavigationView {
                     GeometryReader { geometry in
                         ScrollView {
-                            VStack {
+                            VStack(spacing: 0) {
                                 ForEach(self.weatherListVM.weatherData) { weather in
                                     // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
                                     NavigationLink(
@@ -40,15 +40,19 @@ struct WeatherListView: View {
                                             city: self.getCityItem(cityId: weather.id)
                                         )
                                     }
+                                    Rectangle()
+                                        .fill(Color("Gray02"))
+                                        .frame(height: 1)
                                 }
                             }
+                            .padding(.horizontal, 16)
                             .frame(width: geometry.size.width)
-                            .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
                         }
                         .navigationBarTitle("")
                         .navigationBarHidden(true)
                     }
                 }
+                .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
                 .padding(16)
             }.edgesIgnoringSafeArea(.top)
         }

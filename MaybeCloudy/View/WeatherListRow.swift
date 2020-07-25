@@ -23,7 +23,9 @@ struct WeatherListRow: View {
     
     var body: some View {
         HStack {
-            Text(city.label).font(.headline)
+            Text(city.label)
+                .font(.headline)
+                .foregroundColor(Color("TextBlack"))
             Spacer()
             VStack {
                 URLImage(url: getIconURL()) {
@@ -31,16 +33,21 @@ struct WeatherListRow: View {
                         .resizable()
                         .frame(width: 60.0, height: 60.0, alignment: .center)
                 }
-                Text(getWeatherDetail().description).font(.caption)
-            }.padding(.trailing, 10).frame(width: 90, alignment: .center)
+                Text(getWeatherDetail().description)
+                    .font(.caption)
+                    .foregroundColor(Color("TextBlack"))
+            }
+            .frame(width: 90, alignment: .center)
             HStack {
                 Text(String(round(weather.weatherMain.tempMax * 10) / 10)).foregroundColor(Color("Alert"))
                 Text("/").foregroundColor(Color.gray)
                 Text(String(round(weather.weatherMain.tempMin * 10) / 10)).foregroundColor(Color("Primary"))
             }
             .font(.subheadline)
-            .frame(width: 90, alignment: .leading)
-        }.padding(.vertical, 5)
+            .frame(width: 90, alignment: .trailing)
+        }
+        .padding(.top, 5)
+        .padding(.bottom, 10)
     }
 }
 
