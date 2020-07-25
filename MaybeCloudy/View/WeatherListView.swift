@@ -21,28 +21,35 @@ struct WeatherListView: View {
             Color("Gray01")
                 .edgesIgnoringSafeArea(.all)
     
-            VStack {
+            VStack(spacing: 0) {
                 AppBar()
-                Spacer()
                 NavigationView {
-                    List(weatherListVM.weatherData) { weather in
-                        // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
-                        NavigationLink(
-                            destination: WeatherDetailView(
-                                weather: weather,
-                                city: self.getCityItem(cityId: weather.id)
-                            )
-                        ) {
-                            WeatherListRow(
-                                weather: weather,
-                                city: self.getCityItem(cityId: weather.id)
-                            )
-                        }.background(Color.clear)
+                    GeometryReader { geometry in
+                        ScrollView {
+                            VStack {
+                                ForEach(self.weatherListVM.weatherData) { weather in
+                                    // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
+                                    NavigationLink(
+                                        destination: WeatherDetailView(
+                                            weather: weather,
+                                            city: self.getCityItem(cityId: weather.id)
+                                        )
+                                    ) {
+                                        WeatherListRow(
+                                            weather: weather,
+                                            city: self.getCityItem(cityId: weather.id)
+                                        )
+                                    }
+                                }
+                            }
+                            .frame(width: geometry.size.width)
+                            .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
+                        }
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true)
                     }
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
                 }
-                .background(Color.green)
+                .padding(16)
             }.edgesIgnoringSafeArea(.top)
         }
     }

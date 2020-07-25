@@ -22,7 +22,7 @@ struct WeatherListRow: View {
     }
     
     var body: some View {
-        HStack(spacing: 0) {
+        HStack {
             Text(city.label).font(.headline)
             Spacer()
             VStack {
