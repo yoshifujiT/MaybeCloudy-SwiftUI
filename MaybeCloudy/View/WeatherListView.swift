@@ -25,7 +25,7 @@ struct WeatherListView: View {
                 AppBar()
                 NavigationView {
                     GeometryReader { geometry in
-                        ScrollView {
+                        ScrollView(showsIndicators: false){
                             VStack(spacing: 0) {
                                 ForEach(self.weatherListVM.weatherData) { weather in
                                     // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
@@ -40,9 +40,11 @@ struct WeatherListView: View {
                                             city: self.getCityItem(cityId: weather.id)
                                         )
                                     }
-                                    Rectangle()
-                                        .fill(Color("Gray02"))
-                                        .frame(height: 1)
+                                    if weather.id != self.weatherListVM.weatherData.last!.id {
+                                        Rectangle()
+                                            .fill(Color("Gray02"))
+                                            .frame(height: 1)
+                                    }
                                 }
                             }
                             .padding(.horizontal, 16)
