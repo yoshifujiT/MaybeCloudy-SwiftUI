@@ -29,54 +29,52 @@ struct WeatherListView: View {
             NavigationView {
                 ZStack {
                     Color("Gray01")
-                        .edgesIgnoringSafeArea(.all)
-                    
-                    VStack {
-                        GeometryReader { geometry in
-                            ScrollView(showsIndicators: false){
-                                Spacer()
-                                    .frame(height: 16)
-                                VStack(alignment: .leading, spacing: 0) {
-                                    Text("お気に入り都道府県の \(self.getDate()) の天気")
-                                        .foregroundColor(Color.black)
-                                        .fontWeight(.bold)
-                                        .padding(.top, 8)
-                                        .padding(.bottom, 12)
-                                    VStack(spacing: 0) {
-                                        ForEach(self.weatherListVM.weatherData) { weather in
-                                            // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
-                                            NavigationLink(
-                                                destination: WeatherDetailView(
-                                                    weather: weather,
-                                                    city: self.getCityItem(cityId: weather.id)
-                                                )
-                                            ) {
-                                                WeatherListRow(
-                                                    weather: weather,
-                                                    city: self.getCityItem(cityId: weather.id)
-                                                )
-                                            }
-                                            if weather.id != self.weatherListVM.weatherData.last!.id {
-                                                Rectangle()
-                                                    .fill(Color("Gray02"))
-                                                    .frame(height: 1)
-                                            }
+
+                    VStack(spacing: 0) {
+                        ScrollView(showsIndicators: false){
+                            Spacer()
+                                .frame(height: 16)
+                            VStack(alignment: .leading, spacing: 0) {
+                                Text("お気に入り都道府県の \(getDate()) の天気")
+                                    .foregroundColor(Color.black)
+                                    .fontWeight(.bold)
+                                    .padding(.top, 8)
+                                    .padding(.bottom, 12)
+                                VStack(spacing: 0) {
+                                    ForEach(weatherListVM.weatherData) { weather in
+                                        // TODO: ここでローカル変数cityを宣言してdestinationとRowで使いたい
+                                        NavigationLink(
+                                            destination: WeatherDetailView(
+                                                weather: weather,
+                                                city: self.getCityItem(cityId: weather.id)
+                                            )
+                                        ) {
+                                            WeatherListRow(
+                                                weather: weather,
+                                                city: self.getCityItem(cityId: weather.id)
+                                            )
+                                        }
+                                        if weather.id != self.weatherListVM.weatherData.last!.id {
+                                            Rectangle()
+                                                .fill(Color("Gray02"))
+                                                .frame(height: 1)
                                         }
                                     }
-                                    .padding(.vertical, 8)
-                                    .padding(.horizontal, 16)
-                                    .background(Color.white)
-                                    .frame(width: geometry.size.width)
                                 }
-                                Spacer()
-                                    .frame(height: 16)
+                                .padding(.vertical, 8)
+                                .padding(.horizontal, 16)
+                                .background(Color.white)
+                                .clipped()
+                                .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
                             }
-                            .navigationBarTitle("")
-                            .navigationBarHidden(true)
+                            .padding(.horizontal, 16)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            Spacer()
+                                .frame(height: 16)
                         }
+                        .navigationBarTitle("天気一覧")
+                        .navigationBarHidden(true)
                     }
-                    .padding(.horizontal, 16)
-                    .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
                 }
             }
         }
