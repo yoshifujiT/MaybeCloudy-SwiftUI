@@ -24,7 +24,8 @@ struct URLImage<Content>: View where Content: View {
             imageLoader.image != nil
                 ? content(imageLoader.image!)
                 : content(Image("default"))
-        }.onAppear {
+        }
+        .onAppear {
             self.imageLoader.load(url: self.url)
         }
     }

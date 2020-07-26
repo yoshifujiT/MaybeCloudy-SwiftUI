@@ -27,7 +27,7 @@ struct WeatherListRow: View {
                 .font(.headline)
                 .foregroundColor(Color("TextBlack"))
             Spacer()
-            VStack {
+            VStack(spacing: 0) {
                 URLImage(url: getIconURL()) {
                     $0.renderingMode(.original)
                         .resizable()

@@ -11,10 +11,14 @@ import SwiftUI
 struct AppBar: View {
     var body: some View {
         VStack {
-            Text("MaybeCloudy").font(.title).foregroundColor(.white)
-        }.frame(maxWidth: .infinity)
+            Text("MaybeCloudy")
+                .font(.headline)
+                .foregroundColor(.white)
+                .fontWeight(.bold)
+        }
+        .frame(maxWidth: .infinity)
         .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
-        .padding(.bottom, 10)
+        .padding(.bottom, 8)
         .background(Color("Primary"))
     }
 }
