@@ -13,7 +13,33 @@ struct WeatherDetailView: View {
     var city: CityData
 
     var body: some View {
-        Text(city.label)
+        ZStack {
+            Color("Gray01")
+                .edgesIgnoringSafeArea(.all)
+
+            ScrollView(showsIndicators: false){
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(city.label)
+                        .foregroundColor(Color.black)
+                        .fontWeight(.bold)
+                        .padding(.top, 8)
+                        .padding(.bottom, 12)
+                    VStack {
+                        Text("hogehoge")
+                    }
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 16)
+                    .background(Color.white)
+                    .clipped()
+                    .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                .padding(16)
+                Spacer()
+                    .frame(height: 16)
+            }
+            .navigationBarTitle("\(city.label)の天気", displayMode: .inline)
+        }
     }
 }
 
